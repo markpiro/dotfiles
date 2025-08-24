@@ -1,0 +1,21 @@
+eval "$(jump shell)"
+autoload -U +X compinit && compinit
+
+[ -s "/Users/markpiro/.scm_breeze/scm_breeze.sh" ] && source "/Users/markpiro/.scm_breeze/scm_breeze.sh"
+
+# pnpm
+export PNPM_HOME="/Users/markpiro/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+alias lg="git lg"
+alias ls="eza -l --color=auto --icons=always --no-permissions --no-user"
+alias sl="eza --color=auto"
+
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --max-count=50"
+
+export SCM_BREEZE_DISABLE_ASSETS_MANAGEMENT=false
+
