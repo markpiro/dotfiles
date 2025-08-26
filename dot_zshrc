@@ -19,3 +19,5 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 export SCM_BREEZE_DISABLE_ASSETS_MANAGEMENT=false
 
+source <(fzf --zsh)
+
